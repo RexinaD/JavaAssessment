@@ -8,12 +8,12 @@ class FOperation {
 	Scanner sr;
 	FOperation()
 	{
-		folder="C:\\Users\\e5658969\\OneDrive - FIS\\Desktop\\PracticePrograms";
-		
+		folder="C:\\Users\\HP\\Desktop\\PracticePrograms";
+
 		sr=new Scanner(System.in);
 	}
 	public void home() {
-		
+
 		System.out.println("Virtual Key for your Repository");
 		System.out.println("--------Developer Details---------");
 		System.out.println("Name : Rexina D");
@@ -21,7 +21,7 @@ class FOperation {
 	public void getfiles()
 	{
 		String files[];
-		File file=new File(folder);  
+		File file=new File(folder);
 		files=file.list();
 		for(String name:files)
 		{
@@ -80,7 +80,7 @@ class FOperation {
 			System.out.println("File doesn't exist");
 		}
 	}
-	
+
 }
 public class main
 {
@@ -91,7 +91,7 @@ public class main
 		FOperation fo =new FOperation();
 		fo.home();
 		do {
-			
+
 			System.out.println("1. Retrieve files in Ascending Order\n2.Business Level Operation");
 			System.out.println("3.Exit\nEnter your choice");
 			ch=sr.nextInt();
@@ -99,7 +99,7 @@ public class main
 			{
 				case 1: fo.getfiles();
 						break;
-				case 2: 
+				case 2:
 					int ch1;
 					do {
 						System.out.println("1. Add a File");
@@ -110,7 +110,7 @@ public class main
 						ch1=sr.nextInt();
 						switch(ch1)
 						{
-							case 1: fo.addf(); 
+							case 1: fo.addf();
 								break;
 							case 2:
 									fo.deletef();
