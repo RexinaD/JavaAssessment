@@ -37,7 +37,7 @@ class FOperation {
 		File file=new File(folder+"\\"+fileName);
 		if(file.exists())
 		{
-			System.out.println("File exist.....");
+			System.out.println("File exists.....");
 		}
 		else {
 			System.out.println("File doesn't exist");
@@ -97,11 +97,13 @@ public class main
 			ch=sr.nextInt();
 			switch(ch)
 			{
-				case 1: fo.getfiles();
+				case 1:System.out.println("Retrieving files in ascending order"); 
+					fo.getfiles();
 						break;
 				case 2:
 					int ch1;
 					do {
+						System.out.println("Welcome to Business Operations");
 						System.out.println("1. Add a File");
 						System.out.println("2. Delete a File");
 						System.out.println("3. Search a File");
@@ -110,14 +112,16 @@ public class main
 						ch1=sr.nextInt();
 						switch(ch1)
 						{
-							case 1: fo.addf();
+							case 1:System.out.println("You have chosen to add a file");
+								fo.addf();
 								break;
-							case 2:
+							case 2:System.out.println("You have chosen to delete a file");
 									fo.deletef();
 								break;
-							case 3: fo.searchf();
+							case 3: System.out.println("You have chosen to search for a file");
+								fo.searchf();
 								break;
-							case 4:
+							case 4:System.out.println("Going back to main menu");
 								break;
 							default: System.out.println("Please select valid option");
 						}
